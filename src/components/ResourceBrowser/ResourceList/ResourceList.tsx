@@ -348,6 +348,7 @@ export default function ResourceList() {
             }
         } else if (isNodes) {
             setResourceListLoader(false)
+            setLastDataSync(!lastDataSync)
         }
     }, [selectedResource])
 
@@ -897,6 +898,7 @@ export default function ResourceList() {
                     addTab={addTab}
                     updateNodeSelectionData={updateNodeSelectionData}
                     k8SObjectMapRaw={k8SObjectMapRaw ?? k8SObjectMap}
+                    lastDataSync={lastDataSync}
                 />
             )
         }
